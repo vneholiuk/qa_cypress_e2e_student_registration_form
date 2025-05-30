@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable cypress/unsafe-to-chain-command */
 /// <reference types="cypress" />
 
@@ -16,7 +17,7 @@ describe('Student Registration Form', () => {
     cy.get('#dateOfBirthInput').click();
     cy.get('.react-datepicker__month-select').select('May');
     cy.get('.react-datepicker__year-select').select('2000');
-    cy.get('.react-datepicker__day--015').click();
+    cy.get('.react-datepicker__day--015:not(.react-datepicker__day--outside-month)').click();
 
     cy.get('#subjectsInput').type('Maths{enter}');
 
